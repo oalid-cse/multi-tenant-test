@@ -38,5 +38,5 @@ Command: `php artisan tenant:model {ModelName}`
 - It will create new model in `app/Models` directory
 - It will create new migration in `database/migrations/tenant` directory
 
-[*Note: Or if you already created model and migration or you want to create model/migration using laravel command or manually then you need to use a trait in your model and a trait in your model `use App\Trait\TenantConnection`
+[*Note: Or if you already created model and migration, or you want to create model/migration using laravel command or manually then you need to use a trait in your model `use App\Trait\TenantConnection`
 and for your migration you need to move it to `database/migrations/tenant` directory*]
