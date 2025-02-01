@@ -26,12 +26,17 @@
 ## Multi Tenants Implementation
 
 ### Make New Tenant
-1. `php artisan tenant:create`
-    - It will ask for tenant name and subdomain
-    - It will create new tenant in tenant table
-    - It will create new database for this tenant
-    - It will migrate tenant migrations which is in `database/migrations/tenant` directory
+Command: `php artisan tenant:create`
+- It will ask for tenant name and subdomain
+- It will create new tenant in tenant table
+- It will create new database for this tenant
+- It will migrate tenant migrations which is in `database/migrations/tenant` directory
 
+### Make Tenant Model
+Command: `php artisan tenant:model {ModelName}`
+- If you need to create migration also then you can use `-m` flag
+- It will create new model in `app/Models` directory
+- It will create new migration in `database/migrations/tenant` directory
 
-
-
+[*Note: Or if you already created model and migration or you want to create model/migration using laravel command or manually then you need to use a trait in your model and a trait in your model `use App\Trait\TenantConnection`
+and for your migration you need to move it to `database/migrations/tenant` directory*]
